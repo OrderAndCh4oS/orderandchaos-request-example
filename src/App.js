@@ -5,13 +5,18 @@ import { getPost } from './api/endpoints';
 
 class App extends Component {
 
-    state = {};
+    state = {
+        posts: []
+    };
 
     componentDidMount() {
         getPost().then(result => {
             switch(result.type) {
                 case ResponseType.SUCCESS:
-                    console.log(result.data);
+                    this.setState({posts: result.data});
+                    break;
+                case ResponseType.ERROR:
+                    console.log(result.errors);
                     break;
                 default:
                     // Todo: handle error messages
@@ -22,7 +27,13 @@ class App extends Component {
 
     render() {
         return (
-            <div>Test</div>
+            <div>
+                <h1>Posts</h1>
+                {this.state.posts.map(post => <div key={post.id}>
+                    <h2>{post.title}</h2>
+                    <p>{post.body}</p>
+                </div>)}
+            </div>
         );
     }
 }
