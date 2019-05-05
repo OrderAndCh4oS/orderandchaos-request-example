@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import {ResponseType} from '@orderandchaos/request';
-import { getPost } from './api/endpoints';
+import { ResponseType } from '@orderandchaos/request';
+import { getPostList } from './api/endpoints';
 
 class App extends Component {
 
@@ -10,7 +10,7 @@ class App extends Component {
     };
 
     componentDidMount() {
-        getPost().then(result => {
+        getPostList().then(result => {
             switch(result.type) {
                 case ResponseType.SUCCESS:
                     this.setState({posts: result.data});
@@ -22,7 +22,7 @@ class App extends Component {
                     // Todo: handle error messages
                     console.log(result);
             }
-        })
+        });
     }
 
     render() {
