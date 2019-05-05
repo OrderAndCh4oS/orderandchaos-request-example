@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { ResponseType } from '@orderandchaos/request';
+import {
+    Column,
+    Container,
+    Panel,
+    Row,
+    Text,
+    Title,
+} from '@orderandchaos/react-components';
 import { getPostList } from './api/endpoints';
 
 class App extends Component {
 
     state = {
-        posts: []
+        posts: [],
     };
 
     componentDidMount() {
@@ -27,13 +35,19 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Posts</h1>
-                {this.state.posts.map(post => <div key={post.id}>
-                    <h2>{post.title}</h2>
-                    <p>{post.body}</p>
-                </div>)}
-            </div>
+            <Container>
+                <Title tag={'h1'}>Posts</Title>
+                <Row>
+                    {this.state.posts.map(post =>
+                        <Column key={post.id} span={['xsml-12', 'sml-6', '4']}>
+                            <Panel classname={'bc-light-grey'}>
+                                <Title tag={'h2'}>{post.title}</Title>
+                                <Text>{post.body}</Text>
+                            </Panel>
+                        </Column>,
+                    )}
+                </Row>
+            </Container>
         );
     }
 }
