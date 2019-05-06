@@ -782,7 +782,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
   integrity sha512-w0+uT71b6Yi7i5SE0co4NioIpSYS6lLiXvCzWzGSKvpK5vdQtCbICHMj+gbAKAOtxiV6HsVh/MBdaF9EQ6faSg==
@@ -1021,18 +1021,20 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@orderandchaos/react-components@^0.5.8":
-  version "0.5.8"
-  resolved "https://registry.yarnpkg.com/@orderandchaos/react-components/-/react-components-0.5.8.tgz#07d0f32deabedaad1ffa8933d8aed8859ac7203d"
-  integrity sha512-UgLBZUXxNXHgfyd+XrGViHXwlGJ1MeC3NhPq8evUWqRjiaWx+dol9Xsn7gKSCBxSnUMhlNRt6MezXzm8QlFUog==
+"@orderandchaos/react-components@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@orderandchaos/react-components/-/react-components-0.7.2.tgz#e86aa819bfde397cf1309866f6c2034cd6a721b2"
+  integrity sha512-RtIFxQSDpQdfh/ahRjbgoO2VlbHGmJp6mfj3qRYPbxXZXn0r1OovZ5hLCPFnB+4XzXvPltZCyqdpzFun+eh4dg==
   dependencies:
+    "@babel/runtime" "^7.4.4"
     "@orderandchaos/styles" "^1.0.1"
+    corejs "^1.0.0"
     rc-slider "^8.6.9"
 
-"@orderandchaos/request@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@orderandchaos/request/-/request-1.0.0.tgz#bb2afef438b126de3e961a1b2282ea343cf38ef2"
-  integrity sha512-5HIOeaoz6QSH3ZVwWIMLRZTD6XS8XKnyD32k3abGk7Pj1B26/fcx0kevPkLp34neC1oCDO3smiflUvxvaTHnEQ==
+"@orderandchaos/request@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@orderandchaos/request/-/request-1.1.0.tgz#085e9fb70c8531f503084790e5d9bf9951fb8f2f"
+  integrity sha512-/EZA6hjEwLMfSlf7R1mFXD8J0kgPcvxhYl1/8cYOu28Tiby6L8Dj8TTUH5nKu+VzvGYc/W32ZJsvY5HPCfEbYg==
 
 "@orderandchaos/styles@^1.0.1":
   version "1.9.6"
@@ -2743,6 +2745,11 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+
+corejs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/corejs/-/corejs-1.0.0.tgz#6d19351be6bb85ec96c60fd69c9ce087ad3f0d66"
+  integrity sha1-bRk1G+a7heyWxg/WnJzgh60/DWY=
 
 cosmiconfig@^4.0.0:
   version "4.0.0"

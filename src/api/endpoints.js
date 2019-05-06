@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 
-import Request from '@orderandchaos/request';
+import { Request } from '@orderandchaos/request';
 
 const request = new Request('https://jsonplaceholder.typicode.com');
 
